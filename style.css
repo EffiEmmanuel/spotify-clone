@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url(/assets/fonts/GothamThin.otf) format('otf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(/assets/fonts/GothamLight.ttf) format('ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(/assets/fonts/GothamBook.ttf) format('ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(/assets/fonts/GothamMedium.ttf) format('ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(/assets/fonts/GothamBold.ttf) format('ttf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(/assets/fonts/GothamBlack.otf) format('otf');
+    font-weight: 900;
+}
+
+/* Generic style rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham';
+}
+
+.spotify-logo {
+    width: 85px;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    inset: 0;
+    display: none;
+}
+
+
+/* Nav style rules */
+.main-navigation {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+}
+
+.mobile-menu {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(120%);
+    color: #fff;
+    width: 80%;
+    background-color: #000;
+    height: 100vh;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slideIn {
+    display: flex;
+    animation: slideIn .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(120%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* .slideOut {
+    animation: slideOut .5s ease-in-out;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-120%);
+    }
+} */
+
+.mobile-nav-link {
+    font-size: 1.5em;
+}
+
+.bold {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.mobile-menu ul li {
+    list-style: none;
+    padding: 10px;
+    /* margin: 5px 0; */
+}
+
+.divider {
+    margin: 40px 10px;
+    width: 5%;
+}
+
+#menu-button p {
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+    height: 3px;
+    cursor: pointer;
+    width: 22px;
+}
+
+#menu-button p::before, #menu-button p::after {
+    content: '';
+    height: 3px;
+    width: 22px;
+    background-color: #fff;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+
+#menu-button p::before {
+    top: -6px;
+}
+
+#menu-button p::after {
+    top: 6px;
+}
+
+#toggle:checked~#menu-button p:before {
+    /* transform-origin: left center; */
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#toggle:checked~#menu-button p:after {
+    /* transform-origin: left center; */
+    transform: rotate(-45deg);
+    top: 0px;
+}
+
+#toggle:checked~#menu-button>p {
+    background-color: #000;
+}
+
+#toggle {
+    display: none;
+}
+
+/* Main section style rules */
+main {
+    height: 100vh;
+    background-image: url('https://www-growth.scdn.co/static/home/bursts-tablet.svg');
+    background-size: 153%;
+    background-position: right 40% center;
+    background-color: #2941AB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    text-align: center;
+    color: #1ED760;
+    /* padding: 10%; */
+}
+
+.headline {
+    margin: 40px 0;
+}
+
+.headline h1 {
+    font-size: 90px;
+    margin-top: -40px;
+    font-weight: bolder;
+    line-height: 80px;
+}
+
+.headline p {
+    font-weight: 400;
+    padding: 20px 80px;
+}
+
+.s-button {
+    background-color: #1ED760;
+    color: #2941AB;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: bolder;
+    padding: 14px 32px;
+    border-radius: 500px;
+}
+
+/* Footer style rules */
+footer {
+    background-color: #000;
+    padding: 50px 15px 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.link-title {
+    color: #919496;
+    text-transform: uppercase;
+    font-size: .7em;
+    margin: 50px 0 22px;
+}
+
+.link-group ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-group ul li {
+    margin: 15px 0;
+}
+
+.social-icons {
+    display: flex;
+    margin: 120px 0 15px;
+}
+
+.icon {
+    height: 42px;
+    width: 42px;
+    border-radius: 100%;
+    background-color: #222326;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 20px;
+}
+
+.social-icon:hover {
+    fill: #000;
+}
+
+.country-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+
+.country-container img {
+    width: 13px;
+    margin-right: 7px;
+}
+
+.country,
+.bottom-links {
+    color: #919496;
+    font-size: .55em;
+}
+
+.bottom-links {
+    display: flex;
+    /* margin: 40px 0 0; */
+}
+
+.bottom-links ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    list-style: none;
+}
+
+.bottom-links ul li a {
+    color: #919496;
+    text-decoration: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color .3s ease-in-out;
+}
+
+ul li a:hover {
+    color: #1ED760;
+}
+
+.bottom-links span {
+    width: 40%;
+    text-align: right;
+}
+
+.desktop-navigation {
+    display: none;
+}
+
+.desktop-navigation ul {
+    /* width: 60%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .5em;
+}
+
+.desktop-navigation ul .divider {
+    transform: rotate(90deg);
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .main-content h1 {
+        width: 754px;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-grow: 300px;
+    }
+
+    .main-navigation {
+        padding: 13px 15%;
+    }
+
+    footer {
+        padding: 5% 10% 5%;
+    }
+
+    .bottom-links ul {
+        width: 40%;
+    }
+
+    .bottom-links span {
+        width: 60%;
+    }
+
+    .country,
+    .bottom-links {
+        font-size: .7em;
+    }
+
+    .bottom-links {
+        margin: 20px 0 0;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .main-navigation {
+        padding: 0 10%;
+    }
+
+    .mobile-menu, .menu, .overlay {
+        display: none !important;
+    }
+
+    .desktop-navigation {
+        display: inline-block;
+        width: 35%;
+        font-weight: bold;
+    }
+
+    .spotify-logo {
+        width: 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-content h1 {
+        font-size: 146px;
+        width: 500px;
+        text-indent: -2em;
+        line-height: 135px;
+    }
+}
