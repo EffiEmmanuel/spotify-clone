@@ -12,12 +12,13 @@ This project helped me practice so many HTML and CSS concepts such as:
 
 I plan on building this clone in React soon.
 
-This is a preview of this project:
-<h2>Desktop View</h2>
-![spotify](https://user-images.githubusercontent.com/84421088/174493763-77a7af4e-2837-40fd-bb0d-bb4dfef0daf4.png)
+# Preview:
 
-<h2>Tablet View</h2>
-![spotify-tablet](https://user-images.githubusercontent.com/84421088/174494131-c9429d6e-d8ee-4d54-9899-2e362b340db3.png)
+### `Desktop`
+![spotify-desktop](https://user-images.githubusercontent.com/84421088/174653242-f430e301-3cc8-448f-8047-28100d1f7e55.png)
 
-<h2>Mobile View</h2>
-![spotify-mobile_page-0001](https://user-images.githubusercontent.com/84421088/174494461-dc78ebc9-f991-425d-b417-5a7d37507876.jpg)
+### `Tablet`
+![spotify-tablet](https://user-images.githubusercontent.com/84421088/174653214-8c71d67e-40d3-4212-b329-c4aa5927554b.png)
+
+### `Mobile`
+![spotify-mobile_page-0001](https://user-images.githubusercontent.com/84421088/174653258-5f2c2684-c9bc-4c91-8a18-d936135a0b7d.jpg)
